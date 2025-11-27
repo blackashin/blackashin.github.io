@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReviewSphere Insights - Trusted Reviews</title>
+    <title>BlackAsh - Premium Gifts for Men</title>
     <style>
         * {
             margin: 0;
@@ -12,209 +12,353 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #e0e0e0;
+            background-color: #0a0a0a;
         }
 
         header {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #000;
+            border-bottom: 1px solid #222;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .header-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .site-name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 1rem;
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #999;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         nav a {
             text-decoration: none;
-            color: #555;
+            color: #ccc;
             font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
             transition: color 0.3s;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            color: #3498db;
+            color: #fff;
         }
 
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23111" width="1200" height="600"/><path fill="%23181818" d="M0 300L50 283.3C100 266.7 200 233.3 300 225C400 216.7 500 233.3 600 241.7C700 250 800 250 900 233.3C1000 216.7 1100 183.3 1150 166.7L1200 150V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V300Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
             text-align: center;
+            border-bottom: 1px solid #222;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            opacity: 0.95;
+            font-size: 1.3rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            border: 2px solid #fff;
+        }
+
+        .cta-button:hover {
+            background-color: #000;
+            color: #fff;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .main-content {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .sidebar {
-            width: 300px;
-            min-width: 250px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
+            font-size: 2.5rem;
             margin-bottom: 3rem;
+            color: #fff;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        .review-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
-        .review-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        .product-card {
+            background: #111;
+            border: 1px solid #222;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
         }
 
-        .review-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            color: #2c3e50;
+        .product-card:hover {
+            border-color: #444;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(255,255,255,0.05);
         }
 
-        .review-card p {
-            color: #666;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
+        .product-image {
+            width: 100%;
+            height: 320px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border-bottom: 1px solid #222;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: background-color 0.3s;
+        .product-content {
+            padding: 2rem;
         }
 
-        .btn:hover {
-            background-color: #2980b9;
-        }
-
-        .sidebar-section {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .sidebar-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 0.5rem;
-        }
-
-        .sidebar-item {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #ecf0f1;
-        }
-
-        .sidebar-item:last-child {
-            border-bottom: none;
-        }
-
-        .sidebar-item h4 {
-            font-size: 1rem;
-            color: #2c3e50;
-            margin-bottom: 0.3rem;
-        }
-
-        .sidebar-item p {
+        .product-category {
+            color: #888;
             font-size: 0.85rem;
-            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .product-card p {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .shop-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            transition: all 0.3s;
+        }
+
+        .shop-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .categories {
+            background: #0d0d0d;
+            padding: 5rem 2rem;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .category-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: #111;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid #222;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            border-color: #fff;
+            transform: scale(1.05);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-card h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-section {
+            background: #000;
+            padding: 6rem 2rem;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
         }
 
         footer {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #000;
+            color: #666;
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            border-top: 1px solid #222;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
         }
 
         @media (max-width: 768px) {
-            nav ul {
+            .header-content {
+                flex-direction: column;
                 gap: 1rem;
             }
 
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .hero p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
-            .container {
-                flex-direction: column;
+            .section-title {
+                font-size: 2rem;
             }
 
-            .sidebar {
-                width: 100%;
-            }
-
-            .review-grid {
+            .product-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -222,110 +366,146 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="site-name">ReviewSphere Insights</div>
+            <div class="logo">BLACK<span>ASH</span></div>
             <nav>
                 <ul>
-                    <li><a href="#automobiles">Automobiles</a></li>
-                    <li><a href="#policies">Policies & Insurance</a></li>
-                    <li><a href="#tech">Tech</a></li>
-                    <li><a href="#lifestyle">Home & Lifestyle</a></li>
-                    <li><a href="#finance">Finance Tools</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Hey Nilo</h1>
-        <p>Ab kya hai.... Ab tayari ho gayi hai... Ab maja aayega</p>
+        <h1>BLACKASH</h1>
+        <p>Premium gifts crafted for the modern man. Elevate every moment.</p>
+        <a href="#shop" class="cta-button">Explore Collection</a>
     </section>
 
-    <div class="container">
-        <main class="main-content">
-            <h2 class="section-title">Latest Reviews</h2>
-            <div class="review-grid">
-                <div class="review-card">
-                    <h3>2024 Tesla Model Y Review</h3>
-                    <p>An in-depth look at Tesla's most popular electric SUV, covering performance, range, and value for money in today's EV market.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="review-card">
-                    <h3>State Farm vs. Progressive</h3>
-                    <p>Comprehensive comparison of two leading auto insurance providers, including coverage options, pricing, and customer service ratings.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="review-card">
-                    <h3>iPhone 16 Pro Max Review</h3>
-                    <p>Apple's latest flagship smartphone tested thoroughly. Is the upgrade worth it? We break down the new features and performance.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="review-card">
-                    <h3>Dyson V15 Detect Review</h3>
-                    <p>This cordless vacuum promises laser dust detection and powerful suction. We put it to the test in real home conditions.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="review-card">
-                    <h3>Best Credit Cards 2024</h3>
-                    <p>Our expert picks for cash back, travel rewards, and balance transfer cards. Find the right card for your spending habits.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="review-card">
-                    <h3>Samsung QLED 4K TV</h3>
-                    <p>Stunning picture quality meets smart features. Our detailed review covers everything from gaming performance to streaming quality.</p>
-                    <a href="#" class="btn">Read More</a>
-                </div>
+    <section class="categories">
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-icon">⌚</div>
+                <h3>Timepieces</h3>
             </div>
-        </main>
+            <div class="category-card">
+                <div class="category-icon">👔</div>
+                <h3>Accessories</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🎧</div>
+                <h3>Tech & Audio</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🥃</div>
+                <h3>Barware</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">✍️</div>
+                <h3>Writing</h3>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">💼</div>
+                <h3>Leather Goods</h3>
+            </div>
+        </div>
+    </section>
 
-        <aside class="sidebar">
-            <div class="sidebar-section">
-                <h3>Top Picks</h3>
-                <div class="sidebar-item">
-                    <h4>Best Budget Laptop 2024</h4>
-                    <p>Performance that doesn't break the bank</p>
-                </div>
-                <div class="sidebar-item">
-                    <h4>Top Rated Home Security</h4>
-                    <p>Keep your family safe with these systems</p>
-                </div>
-                <div class="sidebar-item">
-                    <h4>Best Travel Credit Card</h4>
-                    <p>Maximize your rewards on every trip</p>
+    <div class="container" id="shop">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-content">
+                    <div class="product-category">Timepieces</div>
+                    <h3>Midnight Chronograph</h3>
+                    <p>Precision engineered automatic movement in a sleek matte black titanium case. Built for those who appreciate craftsmanship.</p>
+                    <div class="product-price">$899</div>
+                    <a href="#" class="shop-button">View Details</a>
                 </div>
             </div>
 
-            <div class="sidebar-section">
-                <h3>Editor's Choice</h3>
-                <div class="sidebar-item">
-                    <h4>Honda CR-V Hybrid</h4>
-                    <p>Reliability meets efficiency</p>
-                </div>
-                <div class="sidebar-item">
-                    <h4>Geico Insurance Review</h4>
-                    <p>Could you save 15% or more?</p>
+            <div class="product-card">
+                <div class="product-image">💼</div>
+                <div class="product-content">
+                    <div class="product-category">Leather Goods</div>
+                    <h3>Carbon Leather Wallet</h3>
+                    <p>Premium Italian leather meets carbon fiber. Slim, minimalist design with RFID protection for the modern professional.</p>
+                    <div class="product-price">$149</div>
+                    <a href="#" class="shop-button">View Details</a>
                 </div>
             </div>
 
-            <div class="sidebar-section">
-                <h3>Trending Reviews</h3>
-                <div class="sidebar-item">
-                    <h4>Smart Home Hubs 2024</h4>
-                    <p>Connect your entire home ecosystem</p>
-                </div>
-                <div class="sidebar-item">
-                    <h4>Electric SUV Comparison</h4>
-                    <p>Which EV offers the best value?</p>
-                </div>
-                <div class="sidebar-item">
-                    <h4>High-Yield Savings Accounts</h4>
-                    <p>Grow your money with top rates</p>
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <div class="product-content">
+                    <div class="product-category">Tech & Audio</div>
+                    <h3>Eclipse Wireless Earbuds</h3>
+                    <p>Studio-quality sound in a compact design. Active noise cancellation meets 24-hour battery life in premium black aluminum.</p>
+                    <div class="product-price">$299</div>
+                    <a href="#" class="shop-button">View Details</a>
                 </div>
             </div>
-        </aside>
+
+            <div class="product-card">
+                <div class="product-image">🥃</div>
+                <div class="product-content">
+                    <div class="product-category">Barware</div>
+                    <h3>Obsidian Whiskey Set</h3>
+                    <p>Hand-blown crystal glasses with a black obsidian stone chilling system. The gentleman's choice for evening rituals.</p>
+                    <div class="product-price">$249</div>
+                    <a href="#" class="shop-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">✍️</div>
+                <div class="product-content">
+                    <div class="product-category">Writing</div>
+                    <h3>Shadow Fountain Pen</h3>
+                    <p>German engineering meets Japanese craftsmanship. Matte black resin body with 18k gold nib. Every signature matters.</p>
+                    <div class="product-price">$449</div>
+                    <a href="#" class="shop-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">👔</div>
+                <div class="product-content">
+                    <div class="product-category">Accessories</div>
+                    <h3>Onyx Cufflink Set</h3>
+                    <p>Genuine black onyx set in brushed stainless steel. Subtle elegance for those defining moments in boardrooms and beyond.</p>
+                    <div class="product-price">$179</div>
+                    <a href="#" class="shop-button">View Details</a>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>THE BLACKASH PHILOSOPHY</h2>
+            <p>We believe in the power of exceptional gifts. Every piece in our collection is chosen to represent strength, sophistication, and timeless style.</p>
+            <p>BlackAsh isn't just about giving gifts—it's about making statements. For the man who appreciates quality, demands excellence, and never settles.</p>
+            <p>Join the movement. Become part of the cult.</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 ReviewSphere Insights. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#shipping">Shipping Info</a>
+                <a href="#returns">Returns</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 BLACKASH. ALL RIGHTS RESERVED.
+            </div>
+        </div>
     </footer>
 </body>
 </html>
